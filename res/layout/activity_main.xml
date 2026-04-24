@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#0F0F1A">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Word Watcher"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#E0E0FF"/>
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="○ SERVICE STOPPED"
+            android:textColor="#FF5555"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:padding="4dp"/>
+    </LinearLayout>
+
+    <!-- URL Input -->
+    <EditText
+        android:id="@+id/etUrl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Website URL (e.g. https://jobs.com)"
+        android:textColorHint="#888"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/input_bg"
+        android:padding="12dp"
+        android:layout_marginBottom="10dp"
+        android:inputType="textUri"/>
+
+    <!-- Keyword Input -->
+    <EditText
+        android:id="@+id/etKeyword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Keyword to watch (e.g. Apply Now)"
+        android:textColorHint="#888"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/input_bg"
+        android:padding="12dp"
+        android:layout_marginBottom="14dp"
+        android:inputType="text"/>
+
+    <!-- Add Button -->
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add to Watch List"
+        android:backgroundTint="#6C63FF"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="10dp"/>
+
+    <!-- Start Service Button -->
+    <Button
+        android:id="@+id/btnToggleService"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start Watcher Service"
+        android:backgroundTint="#6C63FF"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="10dp"/>
+
+    <Button
+        android:id="@+id/btnTestAlert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Test Alert (Sound + Vibrate)"
+        android:backgroundTint="#1E1E2E"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Watching:"
+        android:textColor="#AAAACC"
+        android:textSize="14sp"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- List of watched items -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+</LinearLayout>

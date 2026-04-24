@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ww_background">#0F0F1A</color>
+    <color name="ww_card">#1E1E2E</color>
+    <color name="ww_accent">#6C63FF</color>
+    <color name="ww_text">#E0E0FF</color>
+</resources>
+
